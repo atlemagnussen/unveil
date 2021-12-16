@@ -4,7 +4,13 @@
   "description": "unveil is not a cms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./dist",
+    "typescript": "tsc --noEmit",
+    "build:vite": "npm run clean && vite build",
+    "watch:vite": "vite",
+    "start": "npm run watch:vite",
+    "deploy:firebase": "firebase deploy",
+    "deploy": "npm run build:vite && npm run deploy:firebase"
   },
   "repository": {
     "type": "git",

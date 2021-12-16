@@ -1,0 +1,26 @@
+:root {
+    --un-controls-background: rgba(61, 21, 21, 0.3);
+
+    --un-fill-one: #F3FBFB;
+    --un-fill-two: #A35B12;
+
+    --un-top-left: #acd3ef;
+    --un-the-rest: #1c93d3;
+    --un-blue: #0000FF;
+
+    --un-black: #222;
+    --un-black-light: #444;
+
+    --un-grey: #bbb;
+
+    --un-white: #eee;
+
+    --un-blue-purple: #5068b7;
+    --un-red: rgba(161, 15, 15, 0.685);
+    --un-green: rgb(23, 160, 80);
+    --un-pink: #e9437a;
+
+    --cyan: #0FF;
+    --cyan-dark: rgb(0, 139, 139);
+
+}

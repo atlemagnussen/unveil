@@ -1,0 +1,29 @@
+:root {
+
+    --un-main-background: var(--un-black);
+    --un-main-foreground: var(--un-grey);
+
+    --un-secondary-background: var(--un-black-light);
+    --un-secondary-foreground: var(--un-white);
+
+    --mdc-theme-primary: var(--un-secondary-foreground);
+    --mdc-theme-on-primary: black;
+    
+    --mdc-theme-background: var(--un-black);
+
+    --mdc-theme-secondary: var(--un-red);
+    --mdc-theme-on-secondary: var(--un-blue-purple);
+
+    --mdc-theme-surface: var(--un-blue-purple);
+    --mdc-theme-on-surface: var(--un-pink);
+
+    --mdc-theme-text-icon-on-background: var(--un-red);
+    --mdc-theme-text-primary-on-background: var(--un-main-foreground);
+    
+    --mdc-theme-error: var(--un-red);
+
+    /* select colors*/
+    --mdc-select-fill-color: var(--un-blue-purple);
+    --mdc-select-ink-color: var(--un-secondary-foreground);
+    --mdc-select-dropdown-icon-color: var(--un-secondary-foreground);
+}
