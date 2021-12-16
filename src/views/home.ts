@@ -9,7 +9,7 @@ export class HomeView extends LitElement {
     static styles = css`
         :host {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             width: 100%;
             height: 100%;
         }
@@ -34,9 +34,9 @@ export class HomeView extends LitElement {
 
         return html`
             <div class="content">
-                    <p>Hello</p>
-                    ${observe(presentationReady, this.doRender)}
-                </div>
+                <p>Hello</p>
+                ${observe(presentationReady, this.doRender)}
+            </div>
         `
     }
 }

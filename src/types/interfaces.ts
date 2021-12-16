@@ -10,6 +10,7 @@ interface PresentationMessage {
 }
 
 interface PresentationConnection {
+    binaryType: string
     id: string
     state: PresentationConnectionState
     onconnect: () => void

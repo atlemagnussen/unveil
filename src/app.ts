@@ -6,6 +6,7 @@ import "@app/style/theme.css"
 import "@app/style/site.css"
 import "@app/views"
 
+import "@app/routing"
 import { gotoPath } from "./routing/router"
 
 @customElement('main-app')
@@ -59,7 +60,7 @@ export class MainAppComponent extends LitElement {
             
             <main>
                 
-                
+                <container-view></container-view>
                 
             </main>
             <footer>
