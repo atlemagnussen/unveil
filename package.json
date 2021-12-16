@@ -1,0 +1,30 @@
+{
+  "name": "unveil",
+  "version": "0.1.0",
+  "description": "unveil is not a cms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atlemagnussen/unveil.git"
+  },
+  "keywords": [
+    "web",
+    "content"
+  ],
+  "author": "atlemagnussen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atlemagnussen/unveil/issues"
+  },
+  "homepage": "https://github.com/atlemagnussen/unveil#readme",
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "lit": "^2.0.2"
+  }
+}
