@@ -1,0 +1,23 @@
+{
+    "projects": {
+        "default": "trainquility-project"
+    },
+    "targets": {
+        "trainquility-project": {
+            "hosting": {
+                "prod": [
+                    "trainquility-project"
+                ],
+                "audioviz": [
+                    "audioviz"
+                ],
+                "awebgl": [
+                    "awebgl"
+                ],
+                "unveil": [
+                    "unveil"
+                ]
+            }
+        }
+    }
+}
