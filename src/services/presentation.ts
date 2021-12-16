@@ -9,15 +9,20 @@ const setPresentationReady = (val: boolean) => {
 
 const presUrls = ["https://unveil.web.app/presentation.html"]
 
-//@ts-ignore
-const request = new PresentationRequest(presUrls)
-request.getAvailability().then((availability: PresentationAvailability) => {
+
+let request: any = null
+const init = async () => {
+    //@ts-ignore
+    request = new PresentationRequest(presUrls)
+    const availability: PresentationAvailability = await request.getAvailability()
+    console.log(availability)
     setPresentationReady(availability.value);
     availability.onchange = function() { setPresentationReady(this.value) }
-})
+}
 
 export const startPresentation = async () => {
     const connection = await request.start()
+    console.log(connection)
     setConnection(connection)
 }
 
@@ -53,3 +58,5 @@ function setConnection(newConnection: PresentationConnection) {
       connection = null;
     }
 }
+
+init()

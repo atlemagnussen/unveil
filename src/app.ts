@@ -4,9 +4,9 @@ import {customElement} from "lit/decorators.js"
 import "@app/style/vars.css"
 import "@app/style/theme.css"
 import "@app/style/site.css"
+import "@app/views"
 
-import { observe } from "@app/directives/ObservableDirective"
-import { presentationReady, startPresentation } from "@app/services/presentation"
+import { gotoPath } from "./routing/router"
 
 @customElement('main-app')
 export class MainAppComponent extends LitElement {
@@ -49,22 +49,7 @@ export class MainAppComponent extends LitElement {
 		    justify-content: flex-start;
 		    align-items: center;
         }
-        .content {
-            display: flex;
-            flex-direction: column;
-		    justify-content: flex-start;
-		    align-items: center;
-        }
     `
-    
-    doRender(ready: boolean) {
-        if (ready) {
-            return html`
-                <button @click=${startPresentation}>Connect</button>
-            `
-        }
-        return html`<span>not ready</span>`
-    }
 
     render() {
         return html`
@@ -73,13 +58,8 @@ export class MainAppComponent extends LitElement {
             </header>
             
             <main>
-                <div class="content">
-                    <p>Hello</p>
-                    ${observe(presentationReady, this.doRender)}
-                </div>
-                <div>
-                    
-                </div>
+                
+                
                 
             </main>
             <footer>
@@ -88,3 +68,5 @@ export class MainAppComponent extends LitElement {
         `
     }
 }
+
+gotoPath(window.location.pathname)
