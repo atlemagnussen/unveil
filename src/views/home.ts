@@ -3,6 +3,7 @@ import {customElement} from "lit/decorators.js"
 
 import { observe } from "@app/directives/ObservableDirective"
 import { presentationReady, startPresentation } from "@app/services/presentation"
+import { goto } from "@app/routing/router"
 
 @customElement('home-view')
 export class HomeView extends LitElement {
@@ -37,6 +38,9 @@ export class HomeView extends LitElement {
                 <p>Hello</p>
                 ${observe(presentationReady, this.doRender)}
             </div>
+            <p>
+                <a href="/board/1" @click=${goto} />Board 1</a>
+            </p>
         `
     }
 }

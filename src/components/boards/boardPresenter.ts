@@ -15,6 +15,7 @@ export class BoardPresenter extends LitElement {
         .content {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
         }
     `
 
