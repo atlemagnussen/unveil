@@ -4,6 +4,7 @@ import {customElement} from "lit/decorators.js"
 import "@app/style/vars.css"
 import "@app/style/theme.css"
 import "@app/style/site.css"
+import "@app/components"
 import "@app/views"
 
 import "@app/routing"

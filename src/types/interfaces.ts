@@ -38,3 +38,13 @@ interface Route {
     admin?: boolean
     init?: Function
 }
+
+interface Board {
+    id: string
+    widgets: Widget[]
+}
+interface Widget {
+    id: string
+    width: number
+    height: number
+}

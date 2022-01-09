@@ -8,6 +8,10 @@ const routes: Route[] =  [
     {
         path: "presentation",
         component: "presentation-view",
+    },
+    {
+        path: "board",
+        component: "board-view",
     }
 ]
 export default routes
