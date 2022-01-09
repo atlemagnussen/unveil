@@ -13,8 +13,12 @@ let testBoard = {
         }
     ]
 }
-export const getBoard = async (id: string): Promise<Board> => {
-    return testBoard
+export const getBoard = (id: string): Promise<Board> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(testBoard)
+        }, 1000)
+    })
 }
 
 export const saveBoard = async(id: string, board: Board) => {

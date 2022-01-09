@@ -26,7 +26,7 @@ export class BoardView extends LitElement {
 
     render() {
         return html`
-            <div>
+            <div class="content">
                 <p>Board-view</p>
                 ${this.board.id}
             </div>

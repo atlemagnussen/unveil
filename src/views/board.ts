@@ -20,14 +20,14 @@ export class BoardView extends LitElement {
     `
 
     @property({attribute: true})
-    id = ""
+    param = ""
 
     async getBoard() {
-        const board = await getBoard(this.id)
+        const board = await getBoard(this.param)
         return board
     }
     render() {
-        if (!this.id)
+        if (!this.param)
             return html`<p>No board id</p>`
 
         return html`
