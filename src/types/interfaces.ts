@@ -47,4 +47,5 @@ interface Widget {
     id: string
     width: number
     height: number
+    html: string
 }

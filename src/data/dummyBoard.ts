@@ -1,15 +1,17 @@
-let testBoard = {
+let testBoard: Board = {
     id: "test",
     widgets: [
         {
             id: "1",
             width: 200,
-            height: 100
+            height: 100,
+            html: "<p>widget1</span>"
         },
         {
             id: "2",
             width: 300,
-            height: 100
+            height: 100,
+            html: "<span>halloooo</span>"
         }
     ]
 }

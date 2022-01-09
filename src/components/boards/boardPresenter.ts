@@ -2,19 +2,19 @@ import {LitElement, html, css} from "lit"
 import {customElement, property} from "lit/decorators.js"
 
 @customElement('board-presenter')
-export class BoardView extends LitElement {
+export class BoardPresenter extends LitElement {
     static styles = css`
         :host {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
+            display: grid;
+		    grid-template-rows: auto 1fr;
+		    box-sizing: border-box;
             height: 100%;
+            width: 100%;
+		    min-height: 100%;
         }
         .content {
             display: flex;
-            flex-direction: column;
-		    justify-content: flex-start;
-		    align-items: center;
+            flex-direction: row;
         }
     `
 
@@ -26,10 +26,17 @@ export class BoardView extends LitElement {
 
     render() {
         return html`
-            <div class="content">
-                <p>Board-view</p>
+            <header>
+            <p>Board-view</p>
                 ${this.board.id}
-            </div>
+            </header>
+            <section>
+                <div class="content">
+                    ${this.board.widgets.map(w => {
+                        return html`<widget-presenter .widget=${w}></widget-presenter>`
+                    })}
+                </div>
+            </section>
         `
     }
 }
