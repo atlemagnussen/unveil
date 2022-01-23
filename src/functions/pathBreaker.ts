@@ -1,6 +1,6 @@
 
 class PathBreaker {
-    getRoute(p: string): BrowserRoute {
+    public static getRoute(p: string): BrowserRoute {
         let route: BrowserRoute = {
             path: "/",
             param: "",
@@ -29,7 +29,7 @@ class PathBreaker {
         return route
     }
 
-    clearEmptyElementsInArray(arr: Array<any>) {
+    private static clearEmptyElementsInArray(arr: Array<any>) {
         for (let i = arr.length - 1; i >= 0; i--) {
             if (!arr[i]) {
                 arr.splice(i, 1)
@@ -39,4 +39,4 @@ class PathBreaker {
     }
 }
 
-export default new PathBreaker()
+export default PathBreaker

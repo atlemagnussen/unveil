@@ -1,11 +1,14 @@
 // this.dom.median.addEventListener("pointerdown", this.pointerdown)
 
-import {LitElement, html, css} from "lit"
+import { ResizeController } from "@app/controllers/ResizeController"
+import {LitElement, ElementPart, html, css} from "lit"
 import {customElement, property} from "lit/decorators.js"
 import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 
+
 @customElement('widget-editor')
 export class WidgetEditor extends LitElement {
+    private rc: ResizeController
     static styles = css`
         :host {
             display: block;
@@ -13,9 +16,13 @@ export class WidgetEditor extends LitElement {
             border: solid 1px white;
             box-sizing: border-box;
             resize: both;
+            overflow: hidden;
         }
     `
-
+    constructor() {
+        super()
+        this.rc = new ResizeController(this)
+    }
     @property({attribute: false})
     widget: Widget = {
         id: "",
