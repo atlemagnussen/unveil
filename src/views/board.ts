@@ -22,6 +22,9 @@ export class BoardView extends LitElement {
     @property({attribute: true})
     param = ""
 
+    @property({attribute: true})
+    action = ""
+
     async getBoard() {
         const board = await getBoard(this.param)
         return board
@@ -31,10 +34,11 @@ export class BoardView extends LitElement {
             return html`<p>No board id</p>`
 
         return html`
-            ${resolvePromise(this.getBoard(), this.renderBoard)}
+            ${resolvePromise(this.getBoard(), (board: Board) => {
+                if (this.action == "edit")
+                    return html`<board-editor .board=${board}></board-editor>`    
+                return html`<board-presenter .board=${board}></board-presenter>`
+            })}
         `
-    }
-    renderBoard(board: Board) {
-        return html`<board-presenter .board=${board}></board-presenter>`
     }
 }
