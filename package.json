@@ -32,6 +32,7 @@
     "vite": "^2.7.2"
   },
   "dependencies": {
+    "firebase": "^9.6.6",
     "lit": "^2.1.1",
     "rxjs": "^7.5.1"
   }
